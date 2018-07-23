@@ -15,10 +15,9 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>Simple SYNTHRONE PHP APP - MAIN SUPER SERVICE</h1>
-                <h2>Congratulations</h2>
-                <p>Your PHP application is now running on a container in Amazon ECS.</p>
-                <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                <h1>Synthrone Microservice - Main</h1>
+                <p>Host: <?php echo gethostname(); ?></p>
+                <p>PHP version: <?php echo phpversion(); ?></p>
                 <?php
                         $myfile = fopen("/var/www/my-vol/date", "r") or die("");
                         echo fread($myfile,filesize("/var/www/my-vol/date"));
